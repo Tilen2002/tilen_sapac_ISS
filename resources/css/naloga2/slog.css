@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#seznam ul
+{
+    border: 2px solid green
+}
+
+#seznam ul li ul
+{
+    border: none;
+}
+
+a
+{
+    color: blue;
+    text-decoration: underline;
+}
+
+a[title] {
+    color: green;
+    text-decoration: underline;
+}
+
+a[href$=".pdf"]
+{
+    background-image: url('/public/slike/pdf.gif');
+    background-repeat: no-repeat;
+    padding-left: 20px; 
+    display:inline;
+    background-position-y: 4px;
+}

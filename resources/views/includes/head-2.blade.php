@@ -7,7 +7,6 @@
     <meta name="author" content="Tilen Sapač"> {{-- Autor spletne strani --}}
     <meta name="description" content="Spletna stran z vajami pri predmetu SSI"> {{-- Kratek opis spletne strani --}}
 
-    @vite('resources/css/app.css')
     @vite('resources/css/naloga2/oblika.css')
-    
+    @vite('resources/css/naloga2/style.css')
 </head>

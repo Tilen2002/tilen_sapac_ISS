@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#menu
+{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#menu
+{
+    padding-bottom: 8px;
+    padding-left: 5px;
+}
+
+#menu li 
+{
+    padding-bottom: 8px;
+    padding-left: 5px;
+}
+
+#menu li a
+{
+    background-color: #68C7FF;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 90px;
+    border-bottom: 1px solid black;
+}
+#menu li a:hover
+{
+    background-color: #4C73B8;
+    padding-right: 84px;
+    border-right: 6px solid black;
+    color: white;
+}
+
+/* #menu li:hover
+{
+    cursor: pointer;
+    background-color: #4C73B8;
+} */

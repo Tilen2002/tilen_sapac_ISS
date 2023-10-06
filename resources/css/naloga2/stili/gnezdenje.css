@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body
+{
+    font-family: Verdana;
+    color: brown;
+}
+
+body span
+{
+    color:red;
+    font-style: italic;
+}
+
+.izjema
+{
+    text-decoration: underline;
+}
+
+.izjema span
+{
+    color: blue;
+    font-size: 26px;
+}

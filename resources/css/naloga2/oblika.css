@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.rdec_h3
+{
+    color: red;
+    font-size: 40px;
+}
+.zelen_h3
+{
+    color: green;
+    font-size: 40px;
+}
+.rumen_h3
+{
+    color: yellow;
+    font-size: 40px;
+}
+.moder_h3
+{
+    color: blue;
+    font-size: 40px;
+}
+
+.zunanji_razdred
+{
+    font-family: Arial;
+    font-size: 12px;
+    color: white;
+    background-color: #A3AEB6;
+    font-weight: bold;
+    text-align: center;
+}
+
+#zunanji_id
+{
+    font-family: Verdana;
+    color: #E1FFAA;
+    background-color: black;
+    text-align: right;
+    line-height: 1.5;
+}
