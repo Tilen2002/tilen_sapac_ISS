@@ -40,3 +40,7 @@ Route::get('/naloga-2/meni', function () {
 Route::get('/naloga-3', function () {
     return view('pages.naloga3.index');
 });
+
+Route::get('/naloga-4', function () {
+    return view('pages.naloga4.index');
+});

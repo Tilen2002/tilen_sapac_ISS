@@ -73,10 +73,10 @@
     <footer id="bottom_main_wrapper">
         <nav id="bottom_limiter">
             <ul id="bottom_meni">
-                <li><a href="/#">o straneh</a></li>
-                <li><a href="/#">kazalo</a></li>
-                <li><a href="/#">kontakt</a></li>
-                <li><a href="/#">na vrh</a></li>
+                <li><a href="#">o straneh</a></li>
+                <li><a href="#">kazalo</a></li>
+                <li><a href="#">kontakt</a></li>
+                <li><a href="#">na vrh</a></li>
             <ul>
         </nav>
     </footer>

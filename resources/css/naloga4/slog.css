@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.ozadje
+{
+    background-color: #ffe5af;
+}
+.green_box
+{
+    display: inline-block;
+    background-color: #78EB42;
+    height: 10em;
+    width: 10em;
+    margin: 1em;
+}
+.red_box
+{
+    display: inline-block;
+    background-color: #F57E7E;
+    height: 10em;
+    width: 10em;
+    margin: 1em;
+}
+.x
+{
+    background-color: yellow;
+    font-weight: bold;
+}
+.y
+{
+    background-color: white;
+}
+table
+{
+    margin-left: 1em;
+    margin-right: 1em;
+}
+td
+{
+    border: 2px solid black;
+}
+td a
+{
+    text-decoration: underline;
+    color: blue;
+}
+
+td div a
+{
+    text-decoration: underline;
+    color: blue;
+}
