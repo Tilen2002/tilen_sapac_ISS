@@ -1,0 +1,1 @@
+$( ".vsebina:gt(0)" ).hide();

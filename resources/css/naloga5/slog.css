@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.novice
+{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 383px;
+}
+
+.novice li
+{
+	padding: 0;
+	margin: 3px;
+	background-color: #f0eeee;
+	color: black;
+	border: 1px solid  #074070;
+}
+
+.glava
+{
+	padding:  3px;
+	margin: 0px;
+	cursor: pointer;
+	position: relative;
+	background-color: #a0d0eb;
+}
+
+.vsebina
+{
+	padding: 5px 10px 15px;
+}
+
+.skrij
+{
+	background-image: url("/public/ikone/arrow-up-icon.png");
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+.pokazi
+{
+	background-image: url("/public/ikone/arrow-down-icon.png");
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+.povezave a
+{
+	text-decoration: underline;
+	color: blue;
+}

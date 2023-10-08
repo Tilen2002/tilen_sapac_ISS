@@ -44,3 +44,39 @@ Route::get('/naloga-3', function () {
 Route::get('/naloga-4', function () {
     return view('pages.naloga4.index');
 });
+
+Route::get('/naloga-5', function () {
+    return view('pages.naloga5.naloga01.index');
+});
+
+Route::get('/naloga-5/naloga02', function () {
+    return view('pages.naloga5.naloga02.index');
+});
+
+Route::get('/naloga-5/naloga03', function () {
+    return view('pages.naloga5.naloga03.index');
+});
+
+Route::get('/naloga-5/naloga04', function () {
+    return view('pages.naloga5.naloga04.index');
+});
+
+Route::get('/naloga-5/naloga05', function () {
+    return view('pages.naloga5.naloga05.index');
+});
+
+Route::get('/naloga-5/naloga06', function () {
+    return view('pages.naloga5.naloga06.index');
+});
+
+Route::get('/naloga-5/naloga07', function () {
+    return view('pages.naloga5.naloga07.index');
+});
+
+Route::get('/naloga-5/naloga08', function () {
+    return view('pages.naloga5.naloga08.index');
+});
+
+Route::get('/naloga-5/naloga09', function () {
+    return view('pages.naloga5.naloga09.index');
+});
