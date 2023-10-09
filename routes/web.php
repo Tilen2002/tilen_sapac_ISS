@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Naloga6Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -80,3 +81,9 @@ Route::get('/naloga-5/naloga08', function () {
 Route::get('/naloga-5/naloga09', function () {
     return view('pages.naloga5.naloga09.index');
 });
+
+Route::get('/naloga-6', function () {
+    return view('pages.naloga6.index');
+});
+
+Route::post('/naloga-6-post', [Naloga6Controller::class, 'postName']);

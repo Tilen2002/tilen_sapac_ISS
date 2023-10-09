@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#main_container
+{
+    padding: 1em;
+}
+
+#main_form
+{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+#input_wrapper
+{
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    padding-bottom: 5px;
+}
+
+#gender_wrapper
+{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+#status_wrapper
+{
+    padding-bottom: 15px;
+}
+
+#status_wrapper select
+{
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+#main_form label
+{
+    padding-right: 1em;
+}
+
+#input_wrapper input
+{
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 15em;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #B3D4EA;
+}
+
+#reg_text
+{
+    font-weight: 500;
+    padding-bottom: 5px;
+    font-size: 2em;
+    color: #325EAA;
+}
+
+#reg_btn
+{
+    background-color: #dddddd;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 2px 10px 2px 10px;
+}
+
+#reg_btn:hover
+{
+    background-color: #b1b0b0;
+    transition-duration: 200ms;
+}
+
+#output_name
+{
+    padding-top: 5px;
+}
