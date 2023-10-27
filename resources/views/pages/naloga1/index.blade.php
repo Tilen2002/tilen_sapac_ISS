@@ -79,7 +79,7 @@
             </a>
             <a class="max-w-[200px]" href="{{ asset('slike/slika2.png') }}">
                 <div>
-                    <img src="{{ asset('slike/slika2.png') }}" alt="slika 2">
+                    <img src="{{ ('slike/slika2.png') }}" alt="slika 2">
                 </div>
             </a>
             <a class="max-w-[200px]" href="{{ asset('slike/slika3.png') }}">

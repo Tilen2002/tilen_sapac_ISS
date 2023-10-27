@@ -9,3 +9,30 @@
     background-repeat: no-repeat;
     position: relative;
 }
+
+#naloga7_bg
+{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.0)) , url('/public/slike/background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
