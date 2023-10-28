@@ -10,6 +10,34 @@ use Illuminate\Support\Facades\DB;
 
 class NewsController extends Controller
 {
+    public function showNews()
+    {
+        $data = DB::table('novica_8')
+            ->select('naslov', 'podnaslov', 'vsebina', 'ustvarjeno', 'posodobljeno', 'slug')
+            ->orderBy('id', 'desc')
+            ->limit(1)
+            ->get();
+
+        $data_last3 = DB::table('novica_8')
+        ->select('naslov', 'podnaslov', 'vsebina', 'ustvarjeno', 'posodobljeno', 'slug')
+        ->orderBy('id', 'desc')
+        ->offset(1)
+        ->limit(3)
+        ->get();
+
+        return view('pages.naloga7.index', ['data' => $data, 'last3' => $data_last3]);
+    }
+
+    public function showSingleNews($slug)
+    {
+        $data = DB::table('novica_8')
+            ->select('naslov', 'podnaslov', 'vsebina', 'ustvarjeno', 'posodobljeno', 'slug')
+            ->where('slug', $slug)
+            ->get();
+
+        return view('pages.naloga7.novica', ['data' => $data]);
+    }
+
     public function generateSlug($naslov)
     {
         $text = str_replace(' ', '-', $naslov);

@@ -89,9 +89,7 @@ Route::get('/naloga-6', function () {
 
 Route::post('/naloga-6-post', [Naloga6Controller::class, 'postName']);
 
-Route::get('/naloga-7', function () {
-    return view('pages.naloga7.index');
-});
+Route::get('/naloga-7', [NewsController::class, 'showNews']);
 
 Route::get('/naloga-7/admin', function () {
     return view('pages.naloga7.admin');
@@ -102,3 +100,5 @@ Route::get('/naloga-7/dodaj-novico', function () {
 });
 
 Route::post('/naloga-7/save-news', [NewsController::class, 'saveNews']);
+
+Route::get('/naloga-7/{slug}', [NewsController::class, 'showSingleNews']);
