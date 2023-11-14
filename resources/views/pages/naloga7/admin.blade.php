@@ -13,7 +13,7 @@
                 <ul class="flex flex-col w-1/2 rounded border-x-2 border-t-2">
                     <li><a href="#" class="w-full flex border-b-2 px-5 py-2 rounded text-gray-700 font-medium hover:bg-sky-600 hover:text-white transition-all duration-200">Novice</a></li>
                     <li><a href="dodaj-novico" class="w-full flex border-b-2 px-5 py-2 rounded text-gray-700 font-medium hover:bg-sky-600 hover:text-white transition-all duration-200">Dodaj</a></li>
-                    <li><a href="#" class="w-full flex border-b-2 px-5 py-2 rounded text-gray-700 font-medium hover:bg-sky-600 hover:text-white transition-all duration-200">Uredi/Izbriši</a></li>
+                    <li><a href="uredi-novico" class="w-full flex border-b-2 px-5 py-2 rounded text-gray-700 font-medium hover:bg-sky-600 hover:text-white transition-all duration-200">Uredi/Izbriši</a></li>
                 <ul>
             </div>
         </div>

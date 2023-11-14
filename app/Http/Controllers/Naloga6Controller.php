@@ -19,8 +19,25 @@ class Naloga6Controller extends Controller
         $username_error = false;
         $password_error = false;
         $re_password_error = false;
+        $recaptcha_error = false;
 
-        if( empty($username) || empty($password) || empty($re_password) )
+        $secret = "6Letow8pAAAAAIZYvYB8-f_LjTpnl2cdaAY2FRfh";
+        $response = $request->input('g-recaptcha-response');
+        $remoteip = $_SERVER['REMOTE_ADDR'];
+        $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$response&remoteip=$remoteip";
+        $data = file_get_contents($url);
+        $row = json_decode($data, true);
+
+        if ($row['success'] == "true") 
+        {
+            $recaptcha_error = false;
+        } 
+        else 
+        {
+            $recaptcha_error = true;
+        }
+
+        if( empty($username) || empty($password) || empty($re_password) || $recaptcha_error == true)
         {
             $controller_response = "Niste izpolnili vsa polja";
             if( empty($username) )
@@ -34,6 +51,11 @@ class Naloga6Controller extends Controller
             if( empty($re_password) )
             {
                 $re_password_error = true;
+            }
+            if( $recaptcha_error == true)
+            {
+                $recaptcha_error = true;
+                $controller_response = "Izpolnite reCaptcho";
             }
         }
         else
@@ -62,7 +84,8 @@ class Naloga6Controller extends Controller
             'status' => $status,
             'username_error' => $username_error,
             'password_error' => $password_error,
-            're_password_error' => $re_password_error
+            're_password_error' => $re_password_error,
+            'recaptcha_error' => $recaptcha_error
         ]);
     }
 }

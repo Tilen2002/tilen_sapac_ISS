@@ -50,6 +50,9 @@
                     @endforeach
                 </select>                
             </div>
+
+            <div name="g-recaptcha" id="g-recaptcha" class="g-recaptcha mb-3" data-sitekey="6Letow8pAAAAAPgNpYTFaeAY_bkjGSPLUefVXRnN"></div>
+
             <div>
                 <button type="submit" id="reg_btn">Pritisni me</button>
             </div>

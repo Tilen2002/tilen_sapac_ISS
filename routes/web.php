@@ -99,6 +99,12 @@ Route::get('/naloga-7/dodaj-novico', function () {
     return view('pages.naloga7.dodajNovica');
 });
 
+Route::get('/naloga-7/uredi-novico', [NewsController::class, 'newsForEdit']);
+
+Route::get('/naloga-7/uredi/{slug}', [NewsController::class, 'editNews']);
+
 Route::post('/naloga-7/save-news', [NewsController::class, 'saveNews']);
 
 Route::get('/naloga-7/{slug}', [NewsController::class, 'showSingleNews']);
+
+

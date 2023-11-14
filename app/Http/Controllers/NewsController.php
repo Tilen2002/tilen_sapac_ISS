@@ -12,13 +12,13 @@ class NewsController extends Controller
 {
     public function showNews()
     {
-        $data = DB::table('novica_8')
+        $data = DB::table('novica')
             ->select('naslov', 'podnaslov', 'vsebina', 'ustvarjeno', 'posodobljeno', 'slug')
             ->orderBy('id', 'desc')
             ->limit(1)
             ->get();
 
-        $data_last3 = DB::table('novica_8')
+        $data_last3 = DB::table('novica')
         ->select('naslov', 'podnaslov', 'vsebina', 'ustvarjeno', 'posodobljeno', 'slug')
         ->orderBy('id', 'desc')
         ->offset(1)
@@ -30,7 +30,7 @@ class NewsController extends Controller
 
     public function showSingleNews($slug)
     {
-        $data = DB::table('novica_8')
+        $data = DB::table('novica')
             ->select('naslov', 'podnaslov', 'vsebina', 'ustvarjeno', 'posodobljeno', 'slug')
             ->where('slug', $slug)
             ->get();
@@ -70,12 +70,32 @@ class NewsController extends Controller
             'podnaslov' => $podnaslov,
             'vsebina' => $vsebina,
             'ustvarjeno' => $cas->format('Y-m-d H:i:s'),
-            'posodobljeno' => $cas->format('Y-m-d H:i:s'),
+            'posodobljeno' => '0000-00-00 00:00:00',
             'slug' => $slug,
         ])) {
             return response()->json(['message' => 'Novica je bila uspešno dodana']);
         } else {
             return response()->json(['message' => 'Prišlo je do napake. Novica ni bila dodana']);
         }
+    }
+
+    public function newsForEdit()
+    {
+        $data = DB::table('novica')
+        ->select('naslov','slug')
+        ->orderBy('id', 'desc')
+        ->get();
+
+        return view('pages.naloga7.urediNovica', ['data' => $data]);
+    }
+
+    public function editNews($slug)
+    {
+        $data = DB::table('novica')
+            ->select('naslov', 'podnaslov', 'vsebina', 'ustvarjeno', 'posodobljeno', 'slug')
+            ->where('slug', $slug)
+            ->get();
+
+        return view('pages.naloga7.urejanjeNovice', ['data' => $data]);
     }
 }

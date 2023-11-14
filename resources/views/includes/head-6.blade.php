@@ -7,6 +7,8 @@
     <meta name="author" content="Tilen Sapač"> {{-- Autor spletne strani --}}
     <meta name="description" content="Spletna stran z vajami pri predmetu SSI"> {{-- Kratek opis spletne strani --}}
 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     @vite('resources/css/app.css')
     @vite('resources/css/naloga6/slog.css')
     
