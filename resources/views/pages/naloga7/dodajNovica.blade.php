@@ -26,7 +26,7 @@
                     <input class="border-2 w-full rounded px-1" type="text" name="podnaslov" id="podnaslov" required>
 
                     <label class="text-gray-700 font-medium pt-4" for="vsebina">Vsebina:</label>
-                    <textarea  class="border-2 w-full rounded px-1" name="vsebina" id="vsebina" rows="4" cols="50" required></textarea>
+                    <textarea  class="border-2 w-full rounded px-1" spellcheck="false" name="vsebina" id="vsebina" rows="4" cols="50" required></textarea>
                 </div>
             </div>
             <div class="w-full max-w-screen-2xl px-10">

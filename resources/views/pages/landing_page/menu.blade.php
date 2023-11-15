@@ -20,7 +20,7 @@
                         <div class="w-full py-[0.2rem] rounded-sm flex items-center justify-center font-semibold text-[#000000] bg-[#8a8d90] hover:bg-[#c5cacd] transition-all duration-100"><a class="w-full flex justify-center" href="/naloga-6">Naloga 6</a></div>
                         <div class="w-full py-[0.2rem] rounded-sm flex items-center justify-center font-semibold text-[#000000] bg-[#8a8d90] hover:bg-[#c5cacd] transition-all duration-100"><a class="w-full flex justify-center" href="/naloga-7">Naloga 7</a></div>
                         <div class="w-full py-[0.2rem] rounded-sm flex items-center justify-center font-semibold text-[#000000] bg-[#8a8d90] hover:bg-[#c5cacd] transition-all duration-100"><a class="w-full flex justify-center" href="/naloga-7">Naloga 8</a></div>
-                        <div class="w-full py-[0.2rem] rounded-sm flex items-center justify-center font-semibold text-[#000000] bg-[#8a8d90] hover:bg-[#c5cacd] transition-all duration-100"><a class="w-full flex justify-center" href="/naloga-9">Naloga 9</a></div>
+                        <div class="w-full py-[0.2rem] rounded-sm flex items-center justify-center font-semibold text-[#000000] bg-[#8a8d90] hover:bg-[#c5cacd] transition-all duration-100"><a class="w-full flex justify-center" href="/naloga-7">Naloga 9</a></div>
                         <div class="w-full py-[0.2rem] rounded-sm flex items-center justify-center font-semibold text-[#000000] bg-[#8a8d90] hover:bg-[#c5cacd] transition-all duration-100"><a class="w-full flex justify-center" href="/naloga-10">Naloga 10</a></div>
                 </div>
                 <div class="flex w-full justify-start items-start">

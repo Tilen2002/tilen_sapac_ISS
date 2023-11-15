@@ -70,7 +70,6 @@ class NewsController extends Controller
             'podnaslov' => $podnaslov,
             'vsebina' => $vsebina,
             'ustvarjeno' => $cas->format('Y-m-d H:i:s'),
-            'posodobljeno' => '0000-00-00 00:00:00',
             'slug' => $slug,
         ])) {
             return response()->json(['message' => 'Novica je bila uspešno dodana']);
@@ -82,7 +81,7 @@ class NewsController extends Controller
     public function newsForEdit()
     {
         $data = DB::table('novica')
-        ->select('naslov','slug')
+        ->select('naslov','slug', 'id')
         ->orderBy('id', 'desc')
         ->get();
 
@@ -98,4 +97,50 @@ class NewsController extends Controller
 
         return view('pages.naloga7.urejanjeNovice', ['data' => $data]);
     }
+
+    public function updateNews(Request $request)
+    {
+        $naslov = trim($request->input('naslov'));
+        $podnaslov = trim($request->input('podnaslov'));
+        $vsebina = $request->input('vsebina');
+        $slug = $request->input('slug');
+        $cas = new DateTime();
+
+        if(strlen($naslov)==0)
+        {
+            return response()->json(['error' => 'Neustrezni vnosni podatki za naslov novice'], 400);
+        }
+        if(strlen($podnaslov)==0)
+        {
+            return response()->json(['error' => 'Neustrezni vnosni podatki za podnaslov novice'], 400);
+        }
+        if($naslov != strip_tags($naslov)) 
+        {
+            return response()->json(['error' => 'Vnosni podatki za naslov ne smejo vsebovati HTML značk'], 400);
+        }
+        if($podnaslov != strip_tags($podnaslov)) 
+        {
+            return response()->json(['error' => 'Vnosni podatki za podnaslov ne smejo vsebovati HTML značk'], 400);
+        }
+
+        if (DB::table('novica')
+            ->where('slug', $slug)
+            ->update([
+                'naslov' => $naslov,
+                'podnaslov' => $podnaslov,
+                'vsebina' => $vsebina,
+                'posodobljeno' => $cas->format('Y-m-d H:i:s')
+        ])) {
+            return response()->json(['message' => 'Novica je bila uspešno urejena']);
+        } else {
+            return response()->json(['error' => 'Prišlo je do napake. Spremembe niso bile shranjene'], 400);
+        }
+    }
+
+    public function deleteNews($slug)
+    {
+        DB::table('novica')->where('slug', $slug)->delete();
+        return redirect()->route('UrejanjeNovice');
+    }
+
 }
