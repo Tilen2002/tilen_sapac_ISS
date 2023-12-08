@@ -33,14 +33,14 @@
                     </p>  
                     <p>{{ $item->vsebina }}</p>
                     </div>
-                    <a href="naloga-7/{{ $item->slug }}" class="font-medium hover:bg-gray-200 transition-all duration-200 px-3 py-1 border-2 rounded text-[#333333]">Več</a>
+                    <a href="naloga-7/novica/{{ $item->slug }}" class="font-medium hover:bg-gray-200 transition-all duration-200 px-3 py-1 border-2 rounded text-[#333333]">Več</a>
                 </div>
                 <div class="">
                     <div class="flex w-full pl-8">
                         <ul class="flex flex-col w-full rounded border-x-2 border-t-2">
                             <li><a class="w-full flex border-b-2 px-5 py-2 rounded-sm font-medium bg-[#f9bc41]  text-[#333333]">Zadnje novice</a></li>
                             @foreach ( $last3 as $item)
-                                <li><a href="naloga-7/{{ $item->slug }}" class="w-full flex border-b-2 px-5 py-2 rounded-sm text-gray-700 font-medium hover:bg-[#f9bc41] hover:text-[#333333] transition-all duration-200">{{ $item->naslov }}</a></li>
+                                <li><a href="naloga-7/novica/{{ $item->slug }}" class="w-full flex border-b-2 px-5 py-2 rounded-sm text-gray-700 font-medium hover:bg-[#f9bc41] hover:text-[#333333] transition-all duration-200">{{ $item->naslov }}</a></li>
                             @endforeach
                         <ul>
                     </div>

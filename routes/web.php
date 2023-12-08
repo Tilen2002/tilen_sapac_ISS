@@ -3,6 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Naloga6Controller;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -89,26 +92,43 @@ Route::get('/naloga-6', function () {
 
 Route::post('/naloga-6-post', [Naloga6Controller::class, 'postName']);
 
-Route::get('/naloga-7', [NewsController::class, 'showNews']);
+Route::get('/naloga-7', [NewsController::class, 'showNews'])->name('homepage');
 
-Route::get('/naloga-7/admin', function () {
-    return view('pages.naloga7.admin');
+Route::middleware(['CheckLogin'])->group(function () {
+    
+    Route::get('/naloga-7/admin', function () {
+        return view('pages.naloga7.admin');
+    });
+
+    Route::get('/naloga-7/dodaj-novico', function () {
+        return view('pages.naloga7.dodajNovica');
+    });
+
+    Route::get('/naloga-7/uredi-novico', [NewsController::class, 'newsForEdit'])->name('UrejanjeNovice');
+    Route::get('/naloga-7/uredi/{slug}', [NewsController::class, 'editNews']);
+
+    Route::post('/naloga-7/save-news', [NewsController::class, 'saveNews']);
+
+    Route::post('/naloga-7/update-news', [NewsController::class, 'updateNews']);
+
+    Route::get('/naloga-7/izbrisi/{slug}', [NewsController::class, 'deleteNews']);
+
+    Route::get('/naloga7/odjava', [UserController::class, 'userLogout']);
 });
 
-Route::get('/naloga-7/dodaj-novico', function () {
-    return view('pages.naloga7.dodajNovica');
-});
+Route::get('/clear-session', [PageController::class, 'deleteSession']);
 
-Route::get('/naloga-7/uredi-novico', [NewsController::class, 'newsForEdit'])->name('UrejanjeNovice');
+Route::get('/naloga-7/registracija', [PageController::class, 'registracija']);
 
-Route::get('/naloga-7/uredi/{slug}', [NewsController::class, 'editNews']);
+Route::get('/naloga-7/novica/{slug}', [NewsController::class, 'showSingleNews']);
 
-Route::post('/naloga-7/save-news', [NewsController::class, 'saveNews']);
+Route::post('/naloga-7/registracijaSave', [UserController::class, 'createUser']);
 
-Route::post('/naloga-7/update-news', [NewsController::class, 'updateNews']);
+Route::get('/naloga-7/prijava', [PageController::class, 'prijava'])->name('login');
 
-Route::get('/naloga-7/izbrisi/{slug}', [NewsController::class, 'deleteNews']);
+Route::post('/naloga-7/UserLogin', [UserController::class, 'userLogin']);
 
-Route::get('/naloga-7/{slug}', [NewsController::class, 'showSingleNews']);
+
+
 
 

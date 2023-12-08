@@ -7,11 +7,16 @@ use App\Models\User;
 use App\Models\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class NewsController extends Controller
 {
-    public function showNews()
+    public function showNews(Request $request)
     {
+        if ($request->hasCookie('uporabnik')) {
+            Session::put('username', $request->cookie('uporabnik'));
+        }
+
         $data = DB::table('novica')
             ->select('naslov', 'podnaslov', 'vsebina', 'ustvarjeno', 'posodobljeno', 'slug')
             ->orderBy('id', 'desc')
